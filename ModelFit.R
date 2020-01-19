@@ -17,6 +17,7 @@ load("data_simu.rda")
 library(doParallel)
 
 ## Simplest Model
+registerDoParallel(detectCores())
 Model1 = foreach(B = 1:1000, .combine = 'rbind') %dopar%{
   data_raw = data_simu[sample.int(nrow(data_simu), 200, replace = F), ]  # sample 200 rows from data_simu
   data = cbind(data_raw[,1:5], FPCA(data_raw[,6:ncol(data_raw)])[[3]]) # combine Y,T,W with coefs of X
