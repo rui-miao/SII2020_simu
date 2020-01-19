@@ -47,4 +47,6 @@ data_simu = t(sapply(1:100000, function(k){
   c(Y,T,W,X)
 }))
 
+save(data_simu, file = "data_simu.rda")
+
 
