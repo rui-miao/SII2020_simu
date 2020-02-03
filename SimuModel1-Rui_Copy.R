@@ -162,7 +162,7 @@ Model1 = foreach(n = c(200,500), .combine = 'acomb3') %:%
     sum(data[,1]*RKHS_fit0$w)/sum(RKHS_fit0$w)
  
   c(tau_HT_glm,tau_Hajek_glm, tau_HT_gam, tau_Hajek_gam, tau_HT_CBPS1, tau_Hajek_CBPS1,
-    tau_Hajek_CBPS2, tau_Hajek_CBPS2, tau_HT_KBCBPS, tau_Hajek_KBCBPS)
+    tau_HT_CBPS2, tau_Hajek_CBPS2, tau_HT_KBCBPS, tau_Hajek_KBCBPS)
 }
 
 save(Model1, file = "Model1.rda")

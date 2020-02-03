@@ -232,7 +232,7 @@ Model1_n2_1 = foreach(B = 1:1000, .combine = 'rbind') %dopar% {
     sum(data[,1]*(1-data[,2])/(1-p_hat_CBPS2))/sum((1-data[,2])/(1-p_hat_CBPS2))
   
   c(tau_HT_glm,tau_Hajek_glm, tau_HT_gam, tau_Hajek_gam, tau_HT_CBPS1, tau_Hajek_CBPS1,
-    tau_Hajek_CBPS2, tau_Hajek_CBPS2) #tau_HT_KBCBPS, tau_Hajek_KBCBPS
+    tau_HT_CBPS2, tau_Hajek_CBPS2) #tau_HT_KBCBPS, tau_Hajek_KBCBPS
 }
 
 apply(Model1_n2_1, 2, mean)
