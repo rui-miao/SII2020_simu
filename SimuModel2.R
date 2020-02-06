@@ -5,6 +5,7 @@ library(gam)
 library(mgcv)
 library(doParallel)
 library(abind)
+library(pracma)
 acomb3 = function(...) abind(..., along = 3)
 
 ## Data Generation for True Model 2
