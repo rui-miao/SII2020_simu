@@ -56,7 +56,7 @@ data_simu_M3 = t(sapply(1:100000, function(k){
   W3 = exp(Z[3]) - exp(0.5)  # Or other function of Z s.t. E W3 = 0 
   W  = c(W1,W2,W3)
   X  = funcCov(A, delta = 0.1, h = 0.02)
-  T  = rbinom(n = 1, size = 1, prob = boot::inv.logit(propScoreM3(z)))
+  T  = rbinom(n = 1, size = 1, prob = boot::inv.logit(propScoreM3(Z)))
   Y  = treatEff(T, Z)
   
   c(Y,T,W,X)
