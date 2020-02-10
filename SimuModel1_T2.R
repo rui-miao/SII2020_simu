@@ -170,4 +170,4 @@ Model1_T2 = foreach(n = c(200,500), .combine = 'acomb3') %:%
     }
   }
 
-save(Model1_t2, file = "Model1_T2.rda")
+save(Model1_T2, file = "Model1_T2.rda")
