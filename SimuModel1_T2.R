@@ -161,7 +161,7 @@ Model1_T2 = foreach(n = c(200,500), .combine = 'acomb3') %:%
     tau_Hajek_KBCBPS = sum(data[,1]*RKHS_fit1$w)/sum(RKHS_fit1$w) - 
       sum(data[,1]*RKHS_fit0$w)/sum(RKHS_fit0$w)
     
-    c(tau_HT_glm,tau_Hajek_glm, tau_HT_gam, tau_Hajek_gam, tau_HT_CBPS1, tau_Hajek_CBPS1,
+    taus = c(tau_HT_glm,tau_Hajek_glm, tau_HT_gam, tau_Hajek_gam, tau_HT_CBPS1, tau_Hajek_CBPS1,
       tau_HT_CBPS2, tau_Hajek_CBPS2, tau_HT_KBCBPS, tau_Hajek_KBCBPS)
     if(sum(is.na(taus)) + sum(is.infinite(taus))>0) {
       NULL
